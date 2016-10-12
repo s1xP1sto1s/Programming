@@ -16,7 +16,7 @@ Your function should return length = 2, with the first two elements of nums bein
 public class Solution {
     public int removeElement(int[] nums, int val) {
         int len = nums.length;
-		    int lenRe = 0;
+	int lenRe = 0;
         for(int i=0; i<len; i++)
         {
           if(nums[i]==val)
@@ -30,6 +30,6 @@ public class Solution {
             len -=1;
           }
         }
-		    return (nums.length - lenRe);
+	return (nums.length - lenRe);
     }
 }
