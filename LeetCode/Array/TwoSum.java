@@ -29,3 +29,22 @@ public class Solution {
         return ret;
     }
 }
+/****************************Runtime 10ms************************/
+/*
+使用HashMap实现，注意HashMap中需要保证键的唯一性，put()方法出现相同键时，用后者的值覆盖前者
+*/
+public class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        HashMap<Integer,Integer> hm = new HashMap<Integer,Integer>();
+        for(int i=0;i<nums.length;i++)
+        {
+            hm.put(nums[i],i);
+        }
+        for(int i=0;i<nums.length;i++)
+        {
+            if(hm.containsKey(target-nums[i])&&(hm.get(target-nums[i])!=i))
+                return new int[]{i,hm.get(target-nums[i])};
+        }
+        return new int[]{0};
+    }
+}
