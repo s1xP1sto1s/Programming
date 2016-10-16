@@ -54,14 +54,14 @@ class Main
       {
         Integer key = it.next();
         if(hm2.containsKey(key))
-              {
-                //double val = (double)Math.round((hm1.get(key)+hm2.get(key))*10)/10;
-                double val = hm1.get(key)+hm2.get(key);
-                if(val==0.0)
-                  hm2.remove(key);
-                else
+        {
+          //double val = (double)Math.round((hm1.get(key)+hm2.get(key))*10)/10;
+          double val = hm1.get(key)+hm2.get(key);
+          if(val==0.0)
+            hm2.remove(key);
+          else
             hm2.put(key,val);
-              }
+        }
         else
           hm2.put(key,hm1.get(key));
       }
@@ -75,7 +75,7 @@ class Main
         Map.Entry<Integer,Double> me = itm.next();
         sb.append(" "+me.getKey());
        // sb.append(" "+me.getValue());
-              sb.append(" "+(double)Math.round(me.getValue()*10)/10);
+        sb.append(" "+(double)Math.round(me.getValue()*10)/10);
       }
       
       System.out.println(sb.toString());
