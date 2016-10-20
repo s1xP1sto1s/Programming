@@ -1,5 +1,5 @@
-1012. The Best Rank (25)
 /*
+1012. The Best Rank (25)
 To evaluate the performance of our first year CS majored students, we consider their grades of three courses only: 
 C - C Programming Language, M - Mathematics (Calculus or Linear Algebra), and E - English. At the mean time,
 we encourage students by emphasizing on their best ranks -- that is, among the four ranks with respect to the three courses
@@ -51,6 +51,11 @@ Sample Output
 1 A
 3 A
 N/A
+*/
+/*
+本题的主要注意点是：出现相同成绩时排名的确定。
+应该是1 2 3 3 5 而不是 1 2 3 3 4！！！
+此法效率较低，有没有效率更高的方法？
 */
 import java.util.*;
 class Main
