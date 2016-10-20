@@ -1,5 +1,5 @@
-1010. Radix (25)
 /*
+1010. Radix (25)
 Given a pair of positive integers, for example, 6 and 110, can this equation 6 = 110 be true? The answer is "yes", 
 if 6 is a decimal number and 110 is a binary number.
 
