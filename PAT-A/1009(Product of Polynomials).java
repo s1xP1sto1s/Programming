@@ -1,5 +1,5 @@
-1009. Product of Polynomials (25)
 /*
+1009. Product of Polynomials (25)
 This time, you are supposed to find A*B where A and B are two polynomials.
 
 Input Specification:
