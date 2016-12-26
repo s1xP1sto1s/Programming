@@ -81,3 +81,54 @@ public class Solution {
         return length;
     }
 }
+/******************************************堆栈实现，不用反转链表*******************************************/
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        LinkedList<Integer> list1 = new LinkedList<Integer>();
+        LinkedList<Integer> list2 = new LinkedList<Integer>();
+        
+        while(l1!=null){
+            list1.addLast(l1.val);
+            l1 = l1.next;
+        }
+        while(l2!=null){
+            list2.addLast(l2.val);
+            l2 = l2.next;
+        }
+        
+        int flag = 0;
+        ListNode head = new ListNode(0);
+        while(!list1.isEmpty() || !list2.isEmpty()){
+            int val1 = list1.peekLast()==null?0:list1.pollLast();
+            int val2 = list2.peekLast()==null?0:list2.pollLast();
+            int temp = val1+val2+flag;
+            ListNode node = new ListNode(temp%10);
+            if(temp>=10){
+                flag = 1;
+            }
+            else{
+                flag = 0;
+            }
+            ListNode tmp = head.next;
+            head.next = node;
+            node.next = tmp;
+        }
+        
+        if(flag==1){
+            head.val = 1;
+            return head;
+        }
+        else{
+            return head.next;
+        }
+
+    }
+}
