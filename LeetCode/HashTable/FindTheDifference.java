@@ -47,3 +47,15 @@ public class Solution {
         return '0';
     }
 }
+/****************************************************************************************/
+public class Solution {
+    public char findTheDifference(String s, String t) {
+        int ss = 0;
+        int tt = 0;
+        for(int i=0;i<s.length();i++)
+            ss += (int)s.charAt(i);
+        for(int i=0;i<t.length();i++)
+            tt += (int)t.charAt(i);
+        return (char)(tt-ss);
+    }
+}
